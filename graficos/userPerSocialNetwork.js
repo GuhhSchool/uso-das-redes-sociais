@@ -1,4 +1,4 @@
-import { getCssVar, tickDefaultStyle } from './common.js';
+import { createGraphic, getCssVar, tickDefaultStyle } from './common.js';
 const path = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json';
 
 async function get() {
@@ -34,11 +34,9 @@ async function get() {
         yaxis: tickDefaultStyle('Quantidade de usuários'),
     };
 
-    const graphicElement = document.createElement('div');
-    const divGraphsElement = document.getElementsByClassName('graficos__container')[0];
-    graphicElement.classList.add('grafico');
-    divGraphsElement.appendChild(graphicElement);
-    Plotly.newPlot(graphicElement, data, layout);
+    createGraphic(data, layout);
+
+    
 }
 
 get();

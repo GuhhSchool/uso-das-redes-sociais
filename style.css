@@ -49,7 +49,6 @@ nav a, nav p {
 }
 
 nav a:hover {
-    text-decoration: underline;
     transform: scale(1.1);
 }
 
@@ -99,4 +98,10 @@ footer {
     margin-top: 3rem;
     padding: 0;
     width: 99%;
+}
+
+main h1 {
+    color: gray;
+    text-align: center;
+    margin: 4em 0;
 }
